@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useParams, useNavigate, Link} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import axios from 'axios';
 import {IoArrowBack} from 'react-icons/io5';
 import {searchByCountry} from "../config";
@@ -10,7 +10,6 @@ const Details = () => {
     const [country, setCountry] = useState(null);
     const {name} = useParams();
     const navigate = useNavigate();
-
     useEffect(() => {
         axios.get(searchByCountry(name)).then(
             ({data}) => setCountry(data[0])

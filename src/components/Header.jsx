@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   padding: 2rem 0;
 `;
 const Title = styled(Link).attrs({
-    to: '/',
+    to: '/countries-spa/',
 })`
   color: var(--colors-text);
   font-size: var(--fs-sm);

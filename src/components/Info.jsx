@@ -148,7 +148,7 @@ const Info = (props) => {
                     { !borders.length ? (<span>There is no border countries</span>)
                     : (
                         <TagGroup>
-                            {neighbors.map(b => (<Tag key={b} onClick={() => {navigate(`/country/${b}`)}}>{b}</Tag>))}
+                            {neighbors.map(b => (<Tag key={b} onClick={() => {navigate(`/countries-spa/country/${b}`)}}>{b}</Tag>))}
                         </TagGroup>
                         )}
                 </Meta>

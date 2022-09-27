@@ -4,7 +4,7 @@ import List from "../components/List";
 import Card from "../components/Card";
 import axios from "axios";
 import {ALL_COUNTRIES} from "../config";
-import {useNavigate} from "react-router-dom";
+import {redirect, useNavigate} from "react-router-dom";
 
 const HomePage = ({countries, setCountries}) => {
     const [filteredCountries, setFilteredCountries] = useState(countries);
@@ -57,9 +57,9 @@ const HomePage = ({countries, setCountries}) => {
                         };
                         return (
                             <Card
-                                key={el.name}
+                                key={countryInfo.name}
                                 {...countryInfo}
-                                onClick={() => {navigate(`/country/${el.name}`)}}
+                                onClick={() => {navigate(`country/${el.name}`)}}
                             />
                         )
                     })
